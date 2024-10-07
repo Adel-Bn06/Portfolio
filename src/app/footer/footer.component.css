@@ -1,0 +1,14 @@
+.footer {
+    color: #ffffff; /* Texte en blanc */
+    padding: 20px 0; /* Espacement vertical */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 2%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem; /* Taille du texte */
+    font-weight: 400; /* Poids du texte */
+}

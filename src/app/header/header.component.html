@@ -1,0 +1,33 @@
+<div class="header_section py-5">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg shadow-lg rounded" style="background-color: #ffcc00;">
+        <a class="navbar-brand px-5" routerLink='/about' style="font-family: 'Gabriola'; font-size: 36px;">Adel Benali</a>
+        <button class="navbar-toggler mx-3 " type="button" (click)="toggleNavbar()" aria-controls="navbarSupportedContent" aria-expanded="isNavbarCollapsed ? 'false' : 'true'" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div [ngClass]="{'collapse': isNavbarCollapsed, 'navbar-collapse': true}" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link transition-link" routerLink='/about'>About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link transition-link" routerLink='/education'>Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link transition-link" routerLink='/experience'>Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link transition-link" routerLink='/projects'>Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link transition-link" routerLink='/skills'>Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link transition-link" routerLink='/contact'>Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  

@@ -1,0 +1,471 @@
+.intro-section {
+   background-color: gray;/* Dark background for the introduction */
+    padding: 2rem; /* Padding around the text */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.info-text {
+    flex: 1; /* Allow text to grow */
+}
+
+.highlight {
+    color: #ffcc00; /* Highlight color for the specific text */
+    text-decoration: underline; /* Underline effect */
+}
+
+.image-responsive {
+    justify-self: center;
+    width: 100%; /* Garder la largeur à 30% */
+    height: auto; /* Laisser la hauteur s'ajuster automatiquement */
+    margin-top: 1%; /* Marge supérieure */
+    position: relative; /* Pour le positionnement des éléments enfants */
+    overflow: hidden; /* Masquer les débordements */
+    border-radius: 50%; /* Forme circulaire */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Ombre douce pour effet de profondeur */
+    transition: transform 0.3s ease; /* Transition pour l'effet de zoom */
+}
+
+.image-responsive::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%; /* Garder le cadre circulaire */
+    background: linear-gradient(to bottom, rgba(255, 204, 0, 0.8), rgba(255, 0, 0, 0.4)); /* Dégradé dynamique */
+    transform: scale(0); /* Échelle initiale à 0 pour l'animation */
+    transition: transform 0.3s ease; /* Transition pour l'effet d'animation */
+}
+
+.image-responsive:hover::before {
+    transform: scale(1.2); /* Agrandir le cadre au survol */
+}
+
+.image-responsive img {
+    border-radius: 50%; /* Garder la forme circulaire pour l'image */
+    width: 100%; /* L'image remplit le cadre */
+    height: auto; /* Maintenir les proportions */
+    transition: transform 0.3s ease; /* Transition pour l'effet de zoom sur l'image */
+}
+
+.image-responsive:hover img {
+    transform: scale(1.02); /* Légère augmentation de la taille de l'image au survol */
+}
+
+.image-responsive .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrer l'overlay */
+    color: white; /* Couleur du texte de l'overlay */
+    text-align: center; /* Centrer le texte */
+    opacity: 0; /* Initialement caché */
+    transition: opacity 0.3s ease; /* Transition pour l'opacité */
+}
+
+.image-responsive:hover .overlay {
+    opacity: 1; /* Afficher l'overlay au survol */
+}
+
+
+
+
+button.btn {
+    transition: background-color 0.3s ease; /* Smooth transition for button hover */
+}
+
+button.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+@media (max-width: 768px) {
+    .image-responsive {
+        max-width: 150px; /* Smaller image size on mobile */
+     
+    }
+}
+@keyframes fadeInLetterLoop {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+  
+  #animated-text span,
+  #animated-subtitle1 span,
+  #animated-subtitle2 span {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInLetterLoop 3s ease-in-out infinite;
+  }
+  
+  #animated-text span {
+    animation-duration: 5s;
+  }
+  
+  #animated-subtitle1 span {
+    animation-duration: 4s;
+  }
+  
+  #animated-subtitle2 span {
+    animation-duration: 4s;
+  }
+  
+
+
+/* Education */
+/* CSS for Education Timeline */
+.timeline {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+  }
+  
+  .timeline-container.right {
+    left: 50%;
+    
+  }
+ 
+  
+  .timeline-container.left {
+    left: 0;
+   
+
+  }
+  
+  .timeline-container .timeline-content {
+    background: #333;
+    padding: 20px;
+    border-radius: 6px;
+    position: relative;
+    color: white;
+  }
+  
+  .timeline-container.left .timeline-content::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: -15px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #333;
+   
+  }
+  
+  .timeline-container.right .timeline-content::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: -15px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #333 transparent transparent;
+    
+  }
+  
+  /* Timeline Line */
+  .timeline::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: #ffcc00;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  .title {
+    font-size: 24px;
+    color: #ffcc00;
+  }
+  
+  .date {
+    font-size: 14px;
+    color: #b5b5b5;
+    margin-top: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .timeline-container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+    .timeline-container.right {
+      left: 0;
+    }
+  
+    .timeline::before {
+      left: 30px;
+    }
+  
+    .timeline-container.left .timeline-content::before,
+    .timeline-container.right .timeline-content::before {
+      left: 30px;
+    }
+  }
+  
+/* Experience */
+/* CSS for Education Timeline */
+.timeline {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+  }
+  
+  .timeline-container.right {
+    left: 50%;
+  }
+  
+  .timeline-container.left {
+    left: 0;
+  }
+  
+  .timeline-container .timeline-content {
+    background: #333;
+    padding: 20px;
+    border-radius: 6px;
+    position: relative;
+    color: white;
+  }
+  
+  .timeline-container.left .timeline-content::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: -15px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #333;
+  }
+  
+  .timeline-container.right .timeline-content::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: -15px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #333 transparent transparent;
+  }
+  
+  /* Timeline Line */
+  .timeline::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: #ffcc00;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  .title {
+    font-size: 24px;
+    color: #ffcc00;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    color: #b5b5b5;
+    margin-top: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .timeline-container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+    .timeline-container.right {
+      left: 0;
+    }
+  
+    .timeline::before {
+      left: 30px;
+    }
+  
+    .timeline-container.left .timeline-content::before,
+    .timeline-container.right .timeline-content::before {
+      left: 30px;
+    }
+  }
+  
+/* Skills */
+.skill-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid #ffcc00;
+    padding: 5px;
+  }
+
+  .skill-item h5 {
+    font-size: 18px;
+    font-family: 'Gabriola', sans-serif;
+    margin-top: 10px;
+    color: #ffcc00;
+  }
+  .projects {
+    background: black;
+    padding: 60px 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    position: relative;
+    background: #2c2c2c;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-title {
+    padding: 15px;
+    font-size: 1.25rem;
+    color: #ffffff;
+}
+
+.card-text {
+    padding: 0 15px 15px;
+    color: #cccccc;
+    
+}
+
+.tech-icons {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    
+}
+
+.tech-icons i {
+    margin-right: 5px;
+    color: #ffffff;
+}
+
+.hover-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.project-card:hover .hover-effect {
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.modal-title {
+    color: #ffffff;
+}
+
+.modal-body img {
+    margin-bottom: 20px;
+}
+
+.contact {
+  position: relative;
+  padding: 60px 0;
+}
+.profile-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+.profile-image:hover {
+  transform: scale(1.05);
+}
+.contact-info {
+  background: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+ 
+ 
+}
+.contact-item i {
+  font-size: 20px;
+  color: #ffcc00;
+  margin-right: 2%;
+}
+.contact-item a {
+  text-decoration: none;
+  color: #fff;
+
+}
+.contact-item a:hover {
+ 
+  color: #ffcc00;
+
+}
+.social-links {
+  font-size: 36px; /* Taille de l'icône */
+}
+.social-links a {
+  font-size: 24px;
+  color: #fff;
+  transition: color 0.3s;
+}
+.social-links a:hover {
+  color:#ffcc00 ;
+}

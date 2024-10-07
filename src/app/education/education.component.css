@@ -1,0 +1,97 @@
+/* CSS for Education Timeline */
+.timeline {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+  }
+  
+  .timeline-container.right {
+    left: 50%;
+  }
+  
+  .timeline-container.left {
+    left: 0;
+  }
+  
+  .timeline-container .timeline-content {
+    background: #333;
+    padding: 20px;
+    border-radius: 6px;
+    position: relative;
+    color: white;
+  }
+  
+  .timeline-container.left .timeline-content::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: -15px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #333;
+  }
+  
+  .timeline-container.right .timeline-content::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: -15px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #333 transparent transparent;
+  }
+  
+  /* Timeline Line */
+  .timeline::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: #ffcc00;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  .title {
+    font-size: 24px;
+    color: #ffcc00;
+  }
+  
+  .date {
+    font-size: 14px;
+    color: #b5b5b5;
+    margin-top: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .timeline-container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+    .timeline-container.right {
+      left: 0;
+    }
+  
+    .timeline::before {
+      left: 30px;
+    }
+  
+    .timeline-container.left .timeline-content::before,
+    .timeline-container.right .timeline-content::before {
+      left: 30px;
+    }
+  }
+  
+
+
+  

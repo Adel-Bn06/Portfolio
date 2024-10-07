@@ -1,0 +1,68 @@
+.header_section {
+   
+    background-size: cover; /* Couvrir toute la section */
+    background-position: center; /* Centrer l'image */
+    color: #fff; /* Couleur du texte par défaut */
+}
+
+.navbar {
+    border-radius: 15px; /* Coins arrondis pour la navbar */
+    transition: background-color 0.3s; /* Transition pour l'effet de survol */
+    
+}
+
+.navbar:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Assombrir le fond au survol */
+}
+
+.nav-link {
+    color: black; /* Couleur des liens */
+    font-size: 18px; /* Taille de la police des liens */
+    transition: color 0.3s; /* Transition pour l'effet de survol */
+}
+
+.nav-link:hover {
+    color: #fff; /* Changer la couleur au survol */
+}
+
+.banner {
+    margin-top: 2rem; /* Marge en haut pour séparer le texte */
+}
+
+.display-4 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre au texte */
+}
+.navbar-nav {
+  
+    text-align: center; /* Assurez-vous que les éléments de la liste sont en ligne */
+  }
+  
+  .nav-item {
+    margin: 0 15px; /* Ajustez les marges pour l'espacement */
+  }
+  .transition-link {
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative; /* Nécessaire pour le décalage de l'ombre */
+  }
+  
+  .transition-link:hover {
+    color: rgb(59, 54, 54); /* Changez la couleur du texte sur le survol */
+    transform: translateY(-2px); /* Déplace légèrement le lien vers le haut sur le survol */
+  }
+  
+  .transition-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px; /* Ajustez la position de l'ombre */
+    height: 2px; /* Hauteur de l'ombre */
+    background-color: rgb(59, 54, 54); /* Couleur de l'ombre */
+    transform: scaleX(0); /* Commence à une échelle de 0 */
+    transition: transform 0.3s ease; /* Animation de l'ombre */
+  }
+  
+  .transition-link:hover::after {
+    transform: scaleX(1); /* L'ombre se développe sur le survol */
+  }
+  

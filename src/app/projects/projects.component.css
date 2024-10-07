@@ -1,0 +1,79 @@
+.projects {
+    background: black;
+    padding: 60px 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    position: relative;
+    background: #2c2c2c;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-title {
+    padding: 15px;
+    font-size: 1.25rem;
+    color: #ffffff;
+}
+
+.card-text {
+    padding: 0 15px 15px;
+    color: #cccccc;
+}
+
+.tech-icons {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+}
+
+.tech-icons i {
+    margin-right: 5px;
+    color: #ffffff;
+}
+
+.hover-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.project-card:hover .hover-effect {
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.modal-title {
+    color: #ffffff;
+}
+
+.modal-body img {
+    margin-bottom: 20px;
+}

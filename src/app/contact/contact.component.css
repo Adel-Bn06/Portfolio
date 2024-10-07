@@ -1,0 +1,52 @@
+
+  .contact {
+    position: relative;
+    padding: 60px 0;
+  }
+  .profile-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+  .profile-image:hover {
+    transform: scale(1.05);
+  }
+  .contact-info {
+    background: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  .contact-item {
+    display: flex;
+    align-items: center;
+   
+   
+  }
+  .contact-item i {
+    font-size: 20px;
+    color: #ffcc00;
+    margin-right: 2%;
+  }
+  .contact-item a {
+    text-decoration: none;
+    color: #fff;
+
+  }
+  .contact-item a:hover {
+   
+    color: #ffcc00;
+
+  }
+  .social-links {
+    font-size: 36px; /* Taille de l'icône */
+}
+  .social-links a {
+    font-size: 24px;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  .social-links a:hover {
+    color:#ffcc00 ;
+  }
